@@ -13,8 +13,7 @@ export default function useAPI() {
         loading.value = true
         if (employees.value.length === 0) {
             const response = await instance.get('api/employees/fetch')
-            employees.value = response.data
-            
+            employees.value = response.data            
         }
         loading.value = false
     }
